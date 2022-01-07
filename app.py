@@ -18,7 +18,7 @@ from matplotlib.ticker import MaxNLocator
 # import regex
 # import emoji
 from seaborn import *
-from heatmap import heatmap
+# from heatmap import heatmap
 from wordcloud import WordCloud , STOPWORDS , ImageColorGenerator
 from nltk import *
 from plotly import express as px
