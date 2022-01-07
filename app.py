@@ -9,14 +9,14 @@ import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 
-import re
+# import re
 import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import *
 import datetime as dt
 from matplotlib.ticker import MaxNLocator
-import regex
-import emoji
+# import regex
+# import emoji
 from seaborn import *
 from heatmap import heatmap
 from wordcloud import WordCloud , STOPWORDS , ImageColorGenerator
