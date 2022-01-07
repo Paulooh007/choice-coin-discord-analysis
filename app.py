@@ -50,10 +50,10 @@ df = data[0]
 emoji_ = data[1]
 
 st.header("Totals")
-st.markdown("<h3 style='text-align: center;'>☀️🌘 Number of Days: 186 </h3>", unsafe_allow_html=True)
-st.markdown("<h3 style='text-align: center;'>📩📩Number of Messages: 33168 </h3>", unsafe_allow_html=True)
-st.markdown("<h3 style='text-align: center;'>🙍🏽🙍‍♀️Number of Unique Authors: 2451 </h3>", unsafe_allow_html=True)
-st.markdown("<h3 style='text-align: center;'>💬💬Number of Word: 1382808 </h3>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center;'>☀️🌘 Total Number of Days: 186 </h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center;'>📩📩Total Number of Messages Sent: 33168 </h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center;'>🙍🏽🙍‍♀️Number of Unique Authors: 2451 </h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center;'>💬💬Number of Word: 1382808 </h2>", unsafe_allow_html=True)
 
 # st.markdown(
 #                 """
