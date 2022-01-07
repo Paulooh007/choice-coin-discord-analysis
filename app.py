@@ -29,7 +29,7 @@ img = Image.open("choice_design.png")
 # st.title("Choice Coin Discord Chat Analysis.")
 st.markdown("<h1 style='text-align: center;'>Choice Coin Discord Chat Analysis</h1>", unsafe_allow_html=True)
 st.image(img)
-st.markdown("<h3 style='text-align: center;'>Chats analysis from ⏱ Tuesday 29th June until Friday Dec 2021 </h3>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center;'>Chats analysis from ⏱ Tuesday 29th June until Friday Dec 31st 2021 </h3>", unsafe_allow_html=True)
 # st.write("2021 Wrapped.")
 
 
@@ -50,7 +50,7 @@ df = data[0]
 emoji_ = data[1]
 
 st.header("Totals")
-st.markdown("<h2 style='text-align: center;'>☀️🌘 Total Number of Days: 186 </h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center;'>☀️🌘Total Number of Days: 186 </h2>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center;'>📩📩Total Number of Messages Sent: 33168 </h2>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center;'>🙍🏽🙍‍♀️Number of Unique Authors: 2451 </h2>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center;'>💬💬Number of Word: 1382808 </h2>", unsafe_allow_html=True)
@@ -120,7 +120,7 @@ df_1["hours"] = df_1['Date_Col'].apply(lambda x: x.hour)
 times_df = df_1.groupby('hours').count().reset_index().sort_values(by = 'hours')
 
 st.subheader("Most Active Hours.")
-st.write("There\'s always more activity in the evening/night time (8pm - 12am).")
+st.write("There\'s always more activity in the evening/night mostly between (8pm - 12am).")
 
 plt.rcParams['font.size'] = 15
 fig = plt.figure(figsize=(24, 12))
@@ -145,6 +145,7 @@ st.text("")
 # ?#############################################################
 
 st.subheader("Most Active Days in 2021.")
+st.write("Some days in the year that recorded the most activities.")
 df.Date = pd.to_datetime(df.Date).dt.date
 
 # st.table(df.groupby('Date').sum())
@@ -190,7 +191,7 @@ df.drop('Mon',axis=1,inplace=True)
 
 month = df.Month.value_counts().rename_axis('Month').reset_index(name='Message')
 
-st.subheader("Total Messages Sent Grouped By Month")
+st.subheader("Total Messages Sent (grouped by month)")
 st.write("October and December happen to be the month with the most activity")
 
 fig = px.bar(month, x='Month', y='Message',
@@ -211,7 +212,7 @@ st.text("")
 
 # ?#############################################################
 
-st.subheader("Total Message Sent Grouped By Day")
+st.subheader("Total Message Sent (grouped by day)")
 dow = df.Day.value_counts().rename_axis('Day').reset_index(name='Message').sort_values(ascending= False, by= "Message")
 
 fig = px.bar(dow.head(20), x='Day', y='Message',
@@ -230,7 +231,7 @@ st.text("")
 st.text("")
 
 # ?#############################################################
-st.subheader("Most Active Member of Channel")
+st.subheader("Most Active Members of the Channel")
 author = df.Author.value_counts().rename_axis('Author').reset_index(name='Message').sort_values(ascending= False, by= "Message")
 fig = px.bar(author.head(20), x='Author', y='Message',
             hover_data=['Message'], color='Message',
@@ -280,3 +281,12 @@ fig.update_layout(
                             width=800,height=400)
 # fig.update_coloraxes(showscale=False)
 st.plotly_chart(fig, use_container_width=True)
+
+
+
+st.subheader("About this App:")
+st.markdown(
+        """
+        
+        **Data Scientist / Developer:** [Paul Okewunmi](https://linkedin.com/in/paul-okewunmi-a24526171). """
+    )
